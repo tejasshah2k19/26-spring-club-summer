@@ -1,0 +1,16 @@
+signup page read -> login 
+login page submit read -> home 
+
+calc
+		input two numbers 
+		submit 
+		addition
+		print on console 
+		
+calc
+		input two numbers 
+		Radio button for addition, subtraction, multiplication, division
+		submit 
+			read , check which radio button is selected
+				print on console 
+-----------------------------------------------------------------

@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.bean.UserBean;
+
 @Controller
 public class SessionController {
 
@@ -22,13 +24,14 @@ public class SessionController {
 	//saveUser -> form -> post 
 	
 	@PostMapping("/saveUser")
-	public String saveUser(String firstName,String lastName,String email,String password) {
+	public String saveUser(UserBean userBean) {
 		//form data read 
-		System.out.println(firstName);
-		System.out.println(lastName);
-		System.out.println(email);
-		System.out.println(password);
+		System.out.println(userBean.getFirstName());
+		System.out.println(userBean.getLastName());
+		System.out.println(userBean.getEmail());
+		System.out.println(userBean.getPassword());
 		//validation 
+	
 		//db insertion 
 		System.out.println("User saved successfully");
 		return "Login";
