@@ -65,7 +65,7 @@ public class SessionController {
 			model.addAttribute("passwordError", "Password is required");
 			isError = true;
 		}//8 A a @  //  
-
+ 
 		// 2) format , regex
 		// 3) password strength
 		// 4) unique email db 
