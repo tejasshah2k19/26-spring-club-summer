@@ -1,0 +1,9 @@
+users 
+	userId , firstName , lastName , email , password , role , createdAt	
+products
+cart 
+order 
+
+
+signup 
+login 

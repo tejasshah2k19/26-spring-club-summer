@@ -14,3 +14,41 @@ calc
 			read , check which radio button is selected
 				print on console 
 -----------------------------------------------------------------
+spring jdbc
+
+spring web -> data base 
+0) mysql-connector jar  & spring data jdbc  
+1) data base url
+2) username 
+3) password 
+-----------------------------------------------------------------
+spring - hibernate - mysql  
+
+0) mysql-connector jar  & spring data jpa
+1) data base url
+2) username 
+3) password 
+4) ddl -> 
+
+ 
+ORM
+
+
+class  ------------------- table 
+entity class ------------------- table 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
