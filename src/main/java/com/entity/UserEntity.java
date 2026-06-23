@@ -15,7 +15,7 @@ public class UserEntity {
 	// columns --- instance variables
 	//primary ?
 	
-	
+	//dao ---> repository : 
 	@Id // primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)// auto increment
 	private Integer userId;

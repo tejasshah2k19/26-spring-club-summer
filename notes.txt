@@ -37,8 +37,29 @@ ORM
 class  ------------------- table 
 entity class ------------------- table 
 
+-------------------------------------------------------------
 
- 
+for query we will use repository:= 
+
+repository is an interface , we will create this inside repository package
+
+users table -> UserEntity -> UserRepository
+
+1) interface UserRepository 
+2) extends JpaRepository<Entity,Primary Key Type> 
+3) @Repository annotation on top of interface
+
+
+-------------------------------------------------------------
+
+singleton design pattern
+	->class -> single instance 
+	
+
+
+
+
+
 
 
 
