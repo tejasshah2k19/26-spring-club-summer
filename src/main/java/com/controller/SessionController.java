@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.entity.UserEntity;
 import com.repository.UserRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
@@ -33,6 +35,12 @@ public class SessionController {
 		return "Login";
 	
 	}
+	
+	@GetMapping(value = {"/","/login"})
+	public String login() {
+		return "Login";
+	}
+	
 	
 }
 
