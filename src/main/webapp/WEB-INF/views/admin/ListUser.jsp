@@ -25,7 +25,7 @@
 			<td>${user.firstName}</td>
 			<td>${user.lastName}</td>
 			<td>${user.email }</td>
-			<td>Delete | View | Edit </td>
+			<td> <a href="/admin/deleteUser/${user.userId}">Delete</a> | View | Edit </td>
 		</tr>
 	</c:forEach>
 		
