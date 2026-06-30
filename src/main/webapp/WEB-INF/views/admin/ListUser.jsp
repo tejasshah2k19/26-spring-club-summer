@@ -26,7 +26,9 @@
 			<td>${user.lastName}</td>
 			<td>${user.email }</td>
 			<td> <a href="/admin/deleteUser/${user.userId}">Delete</a> |
-			 <a href="/admin/viewUser/${user.userId}">View</a> | Edit </td>
+			 <a href="/admin/viewUser/${user.userId}">View</a> | 
+			 
+			 <a href="/admin/editUser/${user.userId}">Edit</a> </td>
 		</tr>
 	</c:forEach>
 		
