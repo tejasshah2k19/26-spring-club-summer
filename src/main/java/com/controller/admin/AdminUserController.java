@@ -1,6 +1,7 @@
 package com.controller.admin;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.entity.UserEntity;
 import com.repository.UserRepository;
-import org.springframework.web.bind.annotation.RequestParam;
-
 
 @Controller
 public class AdminUserController {
@@ -28,17 +27,28 @@ public class AdminUserController {
 		model.addAttribute("users", users);
 		return "admin/ListUser";
 	}
-	
-	//delete from users where userId  = 1 
+
+	// delete from users where userId = 1
 	@GetMapping("admin/deleteUser/{userId}")
 	public String deleteUser(@PathVariable Integer userId) {
 		//
-		userRepository.deleteById(userId); 
-		return "redirect:/admin/users";
+		userRepository.deleteById(userId);
+		return "redirect:/admin/users";// url
 	}
-	 
 
-	
+	// select * from users where userId = 1
+	@GetMapping("/admin/viewUser/{userId}") // url
+	public String viewUser(@PathVariable Integer userId, Model model) {
+
+		Optional<UserEntity> opUser = userRepository.findById(userId); // Optional
+		if (opUser.isPresent()) {
+			UserEntity user = opUser.get(); // extract
+			model.addAttribute("user", user);
+			return "admin/ViewUser";// jsp
+
+		} else {
+			return "redirect:/admin/users"; // url
+		}
+	}
+
 }
-
-
